@@ -398,7 +398,7 @@ elif selected_menu == 'Testing':
         neighbors_df = pd.DataFrame(neighbors_data)
         st.text("musik yang serupa : ")
         st.write(neighbors_df)
-        st.text("hasil prediksi nya menggunakan KNN : ")
+        st.text("hasil klasifikasi nya menggunakan KNN : ")
         
 
 
