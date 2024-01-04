@@ -9,10 +9,10 @@ from sklearn.model_selection import train_test_split
 st.title("Top 50 song popularity")
 
 st.sidebar.title('Tahapan Machine Learning')
-menu_options = ['Accessing Data','EDA', 'Modeling','Testing']
+menu_options = ['Data Collection','EDA', 'Modeling','Testing']
 selected_menu = st.sidebar.selectbox('Pilih Menu:', menu_options,key=0)
 
-if selected_menu == 'Accessing Data':
+if selected_menu == 'Data Collection':
     st.header('Accessing Data')
     st.text("data ini merupakan data 50 musik top yang di update setiap minggunya")
     data = pd.read_csv("Top-50-musicality-global.csv")
