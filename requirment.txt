@@ -1,6 +1,6 @@
 streamlit
 pandas
-seaborn
+seaborn==0.13.1
 numpy
 matplotlib
 SKlearn
