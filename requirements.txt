@@ -3,4 +3,4 @@ pandas
 seaborn==0.13.1
 numpy
 matplotlib
-SKlearn
+scikit-learn
