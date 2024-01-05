@@ -19,6 +19,30 @@ if selected_menu == 'Data Collection':
     df = pd.DataFrame(data)
     st.dataframe(df)
 
+    def addfitur():
+        try:
+            pop_scores = []
+
+            for i in df["Popularity"]:
+                if i >= 81 and i<=100:
+                    pop_scores.append("Very popular")
+                elif i >= 61 and i<=80:
+                    pop_scores.append("Popular")
+                elif i >= 40 and i<=60:
+                    pop_scores.append("Middle popularity")
+                else:
+                    pop_scores.append("Unpopular")
+
+            df["Popularity rank"] = pop_scores
+
+            print(df[["Energy", "Liveness", "Popularity","Positiveness","Loudness","Popularity rank"]].tail(10))
+            return True
+        except:
+            return False
+            
+    if addfitur():
+        st.text("")
+    
     st.text("Jumlah baris dan kolom")
     st.write(df.shape)
     st.text("Informasi type data : ")
