@@ -17,8 +17,6 @@ if selected_menu == 'Data Collection':
     st.text("data ini merupakan data 50 musik top yang di update setiap minggunya")
     data = pd.read_csv("Top-50-musicality-global.csv")
     df = pd.DataFrame(data)
-    st.dataframe(df)
-
     def addfitur():
         try:
             pop_scores = []
@@ -42,6 +40,7 @@ if selected_menu == 'Data Collection':
             
     if addfitur():
         st.text("")
+    st.dataframe(df)
     
     st.text("Jumlah baris dan kolom")
     st.write(df.shape)
